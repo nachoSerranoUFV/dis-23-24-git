@@ -9,7 +9,7 @@ console.log("==================");
 
 let salida = "";
 
-for (let i = 1; i <= 10; i++) {
-    salida += `5 x ${i} = ${5 * i}\n`;
+for (let i = 1; i <= 30; i++) {
+    salida += `5 x ${i} = ${5 * i}\n`; //Comments by Nacho
 }   
 console.log(salida);
