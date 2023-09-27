@@ -2,7 +2,14 @@
 
 //Tabla del 5
 
+console.clear();
+console.log("==================");
+console.log("Tabla del 5"); 
+console.log("==================");
+
+let salida = "";
+
 for (let i = 1; i <= 10; i++) {
-    // console.log(`El valor de i es: ${i}`);
-    console.log(`5 x ${i} = ${5 * i}`);
-}
+    salida += `5 x ${i} = ${5 * i}\n`;
+}   
+console.log(salida);
