@@ -1,21 +1,13 @@
-// const fs = require("fs");
+const { crearArchivo } = require("./helpers/multiplicar");
+const argv = require("./config/config");
+const colors = require("colors");
 
-//Tabla del 5
 
 console.clear();
-console.log("==================");
-console.log("Tabla del 5"); 
-console.log("==================");
 
-let salida = "";
-let salida_bis = "";
+// const [, , arg3 = "base=5"] = process.argv;
+// const [, base = 5] = arg3.split("=");
 
-for (let i = 1; i <= 10; i++) {
-    salida += `5 x ${i} = ${5 * i}\n`;
-}   
-
-for (let i = 1; i <= 30; i++) {
-    salida_bis += `5 x ${i} = ${5 * i}\n`; //Comments by Nacho
-}   
-console.log(salida);
-console.log(salida_bis);
+crearArchivo(argv.b, argv.l, argv.h)
+  .then((fileName) => console.log(`${colors.rainbow(fileName)} created`))
+  .catch((err) => console.log(err.message));
